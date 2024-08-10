@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244.48 80.95">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-1, .cls-4 {
+        fill: #000;
+      }
+
+      .cls-2 {
+        fill: #f0ba45;
+      }
+
+      .cls-3 {
+        fill: #d7a036;
+      }
+
+      .cls-4 {
+        font-family: FrutigerLTArabic-65Bold, 'Frutiger LT Arabic';
+        font-size: 27.2px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <rect class="cls-2" width="244.48" height="80.95" rx="2.32" ry="2.32"/>
+        <rect class="cls-1" x="86.4" y="-77.13" width="71.67" height="235.2" rx="2.32" ry="2.32" transform="translate(162.71 -81.76) rotate(90)"/>
+        <rect class="cls-3" x="88.72" y="-74.81" width="67.04" height="230.57" rx="2.32" ry="2.32" transform="translate(162.71 -81.76) rotate(90)"/>
+      </g>
+      <text class="cls-4" transform="translate(49.38 48.8)"><tspan x="0" y="0" xml:space="preserve">رابــتخاا  أدــــبا</tspan></text>
+    </g>
+  </g>
+</svg>

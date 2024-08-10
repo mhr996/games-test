@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اضطراب الألعاب الإلكترونية</title>
+    <link rel="stylesheet" href="assets/vendor/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <div>
+    <div id="qcc" class="primary">
+      <div id="qc" class="home-bg">
+        <!-- begin start banner section -->
+        <div id="home-banner">
+          <div class="start-button-wrapper">
+            <button id="start-btn"></button>
+          </div>
+        </div>
+        <!-- end start banner section -->
+
+        <!-- begin user info section -->
+        <div id="userInfo" style="display: none" class="primary">
+          <p id="error-message">يرجى إدخال المعلومات التالية قبل البدء في الاختبار.</p>
+          <div class="input-section">
+            <div>
+              <label for="sex">الجنس </label>
+              <select type="text" id="sex">
+                <option value="ذكر">ذكر</option>
+                <option value="أنثى">أنثى</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="age">العمر: </label>
+              <input type="number" id="age" />
+            </div>
+          </div>
+
+          <button id="first-next-button">التالي</button>
+        </div>
+        <!-- end user info section -->
+
+        <!-- choose kid or adult section -->
+        <div id="chooseTest" style="display: none" class="primary userInfo">
+          <p id="error-message-two">يرجى الإختيار قبل البدء في الاختبار</p>
+          <div class="question">
+            <p>هل أنت:</p>
+
+            <div class="optionsC">
+              <label><input type="radio" name="role" value="player" />لاعب</label
+              ><label><input type="radio" name="role" value="parent" />أحد الوالدين</label>
+            </div>
+          </div>
+
+          <button id="second-next-button">التالي</button>
+        </div>
+
+        <!-- intro for player section -->
+        <div id="playerIntro" style="display: none" class="primary userInfo">
+          <div class="input-section">
+            <div>
+              <label for="whenStartedPlaying">متى بدأت اللعب؟</label>
+              <select id="whenStartedPlaying">
+                <option value="قبل عمر 6 سنوات">قبل عمر 6 سنوات</option>
+                <option value="بين عمر 7 و 12 سنة">بين عمر 7 و 12 سنة</option>
+                <option value="بين عمر 13 و 17 سنة">بين عمر 13 و 17 سنة</option>
+                <option value="بعد سن 18 سنة">بعد سن 18 سنة</option>
+                <option value="ما أتذكر">ما أتذكر</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="playigTime">معدل لعبك في الأسبوع؟</label>
+              <select id="playigTime">
+                <option value="أقل من 7 ساعات ">أقل من 7 ساعات</option>
+                <option value="ما بين 8 إلى 14 ساعة">ما بين 8 إلى 14 ساعة</option>
+                <option value="ما بين 15 إلى 20 ساعة ">ما بين 15 إلى 20 ساعة</option>
+                <option value="ما بين 31 إلى 40 ساعة ">ما بين 31 إلى 40 ساعة</option>
+                <option value="أكثر من 40 ساعة">أكثر من 40 ساعة</option>
+              </select>
+            </div>
+          </div>
+          <button id="player-start-button">التالي</button>
+        </div>
+
+        <!-- intro for parent section -->
+        <div id="parentIntro" style="display: none" class="primary userInfo">
+          <div class="input-section">
+            <div>
+              <label for="whenStartedPlayingAdult">متى بدأ ابنك / ابنتك اللعب؟</label>
+              <select id="whenStartedPlayingAdult">
+                <option value="قبل عمر 6 سنوات">قبل عمر 6 سنوات</option>
+                <option value="بين عمر 7 و 12 سنة">بين عمر 7 و 12 سنة</option>
+                <option value="بين عمر 13 و 17 سنة">بين عمر 13 و 17 سنة</option>
+                <option value="بعد سن 18 سنة">بعد سن 18 سنة</option>
+                <option value="ما أتذكر">ما أتذكر</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="playigTimeAdult">معدل لعب ابنك / ابنتك في الأسبوع؟</label>
+              <select id="playigTimeAdult">
+                <option value="أقل من 7 ساعات ">أقل من 7 ساعات</option>
+                <option value="ما بين 8 إلى 14 ساعة">ما بين 8 إلى 14 ساعة</option>
+                <option value="ما بين 15 إلى 20 ساعة ">ما بين 15 إلى 20 ساعة</option>
+                <option value="ما بين 31 إلى 40 ساعة ">ما بين 31 إلى 40 ساعة</option>
+                <option value="أكثر من 40 ساعة">أكثر من 40 ساعة</option>
+              </select>
+            </div>
+          </div>
+          <button id="parent-start-button">التالي</button>
+        </div>
+
+        <!-- begin question section -->
+        <div id="questions" style="display: none"></div>
+        <!-- end question section -->
+
+        <!-- begin: perfect results -->
+        <div class="result success" id="perfect-result" style="display: none">
+          <img id="perfect-result-img" class="result-img" />
+          <p id="perfect-result-txt" class="result-txt"></p>
+        </div>
+        <!--end: perfect results -->
+
+        <!-- Slider main container -->
+        <div class="swiper" id="result" style="display: none">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div id="result-box" class="result">
+                <img id="result-img" class="result-img" />
+                <p id="result-txt" class="result-txt"></p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="result">
+                <img id="image1" class="result-img" src="" alt="Image 1" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="result">
+                <img id="image2" class="result-img" src="" alt="Image 2" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="result">
+                <img id="image3" class="result-img" src="" alt="Image 3" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="result">
+                <img id="image4" class="result-img" src="" alt="Image 4" />
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+        <!-- end of Slider main container -->
+      </div>
+    </div>
+    <script src="assets/vendor/swiper-bundle.min.js"></script>
+    <script src="modules/main.js" type="module"></script>
+  </div>
+</html>

@@ -1,0 +1,402 @@
+/* Define custom font */
+@font-face {
+  font-family: "FrutigerLTArabic65Bold";
+  src: url("fonts/FrutigerLTArabic65Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+* {
+  box-sizing: border-box;
+}
+
+.swiper {
+  width: 100%;
+  height: fit-content;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+}
+
+/* Apply custom font to buttons and inputs */
+button,
+input {
+  font-family: "FrutigerLTArabic65Bold" !important;
+}
+
+/* General container styles */
+#qcc {
+  padding: 0px 0px;
+  max-width: 1205px;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.home-bg {
+  background-image: url("https://www.ghc.sa/yourhealthguide/wp-content/uploads/sites/2/2024/08/%D8%A7%D8%B3%D8%A7%D9%95%D9%84%D9%87-%D8%A7%D8%AF%D8%A7%D8%A9-%D8%A7%D8%B6%D8%B7%D8%B1%D8%A7%D8%A8-%D8%A7%D9%84%D8%A7%D9%84%D8%B9%D8%A7%D8%A8-%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9-2-10-scaled.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+}
+
+#qc {
+  font-family: "FrutigerLTArabic65Bold";
+  direction: rtl;
+  text-align: right;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 250px;
+}
+#error-message,
+#error-message-two {
+  font-size: 13px;
+  color: #f30f0f;
+  background-color: #fff;
+  display: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: 0.4s all;
+}
+#questions {
+  width: 100%;
+  height: 95%;
+  background-color: #081929;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 250px;
+}
+
+/* Question styles */
+.question {
+  margin-bottom: 20px;
+  min-width: 75%;
+  max-width: 76%;
+}
+
+.question p {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+/* Result styles */
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 0px 15px;
+  gap: 15px;
+}
+
+.result-txt {
+  color: #fff;
+  font-size: 20px;
+  text-align: start;
+}
+
+.result-img {
+  width: 940px !important;
+  margin: 0 auto !important;
+  display: inline-block;
+}
+
+/* Advice image styles */
+.advice-img {
+  width: 100%;
+  min-width: 300px;
+}
+
+/* Banner styles */
+#home-banner {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+}
+
+#banner-img {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 300px;
+}
+
+/* Start button styles */
+#next-button {
+  width: 150px;
+  height: 45px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-button-wrapper {
+  padding: 2px;
+  width: 250px;
+}
+#start-btn {
+  background-color: rgba(255, 0, 0, 0);
+  width: 100%;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Options container styles */
+#optionsC,
+.optionsC {
+  margin-top: 44px;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 1.4px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 120px;
+  row-gap: 35px;
+  text-align: center;
+}
+
+/* User info styles */
+#userInfo,
+.userInfo {
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 68px;
+  min-height: 280px;
+}
+
+#userInfo .input-section,
+.userInfo .input-section {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 80px;
+  margin-top: 15px;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 1.4px;
+  display: grid;
+  row-gap: 35px;
+}
+
+#userInfo label,
+.userInfo label {
+  font-size: 18px;
+  color: #fff;
+}
+
+#userInfo input,
+#userInfo select,
+.userInfo select {
+  width: 100%;
+  padding: 8px;
+  height: 44px;
+  font-size: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  font-family: "FrutigerLTArabic65Bold";
+}
+
+#userInfo button,
+.userInfo button {
+  padding: 10px 50px;
+  background-color: #1a84f5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+#chooseTest > div > div > label {
+  color: #fff;
+}
+
+#userInfo button:hover,
+.userInfo button:hover {
+  background-color: #0c67c9;
+}
+
+/* Title styles */
+.title {
+  color: #fff;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+}
+
+.tip {
+  color: #fff;
+  margin: auto;
+  padding-top: 25px;
+}
+.tip h2 {
+  font-size: 24px;
+  color: #fff;
+  margin: 0px;
+}
+
+.tip p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+
+.tip ol,
+.tip ul {
+  margin: 0;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.tip li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.primary {
+  background-color: #081929 !important;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+  #qcc {
+    padding: 0px 5px;
+  }
+  #qc {
+    background-position: center;
+  }
+  .bg-pattren-top-left {
+    width: 227px;
+    height: 111px;
+  }
+  .bg-pattren-bottom-right {
+    width: 227px;
+    height: 111px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  #optionsC {
+    grid-template-columns: 1fr; /* Stack items in a single column */
+    column-gap: 0; /* Remove column gap */
+    row-gap: 14px; /* Adjust row gap as needed */
+    margin-top: 16px;
+    text-align: start;
+  }
+  .question p {
+    text-align: start;
+  }
+  #optionsC > label {
+    margin-bottom: 8px;
+  }
+
+  #userInfo .input-section,
+  .userInfo .input-section {
+    grid-template-columns: 1fr; /* Stack items in a single column */
+    column-gap: 0; /* Remove column gap */
+    margin: 0px;
+    row-gap: 10px; /* Adjust row gap as needed */
+  }
+
+  #userInfo button,
+  .userInfo button {
+    margin: 10px auto !important;
+  }
+
+  #home-banner {
+    width: 100%;
+    margin: 46px 6px 40px auto !important;
+  }
+
+  #banner-img {
+    width: 200px;
+    bottom: 0;
+  }
+
+  #titlesC {
+    top: -40px;
+  }
+
+  .advice-img {
+    width: 100%;
+  }
+
+  #title2 {
+    font-size: 25px;
+  }
+
+  #title1 {
+    font-size: 22px;
+  }
+
+  .result {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    margin: auto 0px;
+    gap: 2px;
+  }
+  .swiper-slide {
+    margin: auto;
+  }
+  .result-txt {
+    margin: 0px !important;
+    font-size: 18px;
+    text-align: center !important;
+  }
+
+  .tip {
+    padding-top: 5px;
+  }
+  .tip li {
+    font-size: 13px;
+  }
+  .tip h2 {
+    font-size: 14px;
+  }
+  .tip p {
+    font-size: 13px;
+  }
+  #questions {
+    min-height: 350px;
+  }
+
+  .result-img {
+    width: 88vw !important;
+  }
+  .start-button-wrapper {
+    padding: 2px;
+    margin: 47px auto 0 auto;
+    width: 143px;
+  }
+}
