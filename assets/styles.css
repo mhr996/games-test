@@ -37,7 +37,7 @@ input {
 .home-bg {
   background-image: url("https://www.ghc.sa/yourhealthguide/wp-content/uploads/sites/2/2024/08/%D8%A7%D8%B3%D8%A7%D9%95%D9%84%D9%87-%D8%A7%D8%AF%D8%A7%D8%A9-%D8%A7%D8%B6%D8%B7%D8%B1%D8%A7%D8%A8-%D8%A7%D9%84%D8%A7%D9%84%D8%B9%D8%A7%D8%A8-%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9-2-10-scaled.jpg");
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center;
   background-size: contain;
 }
 
@@ -51,7 +51,7 @@ input {
   align-items: center;
   justify-content: center;
   margin: 0;
-  min-height: 250px;
+  min-height: 300px;
 }
 #error-message,
 #error-message-two {
