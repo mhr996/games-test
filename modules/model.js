@@ -109,11 +109,20 @@ export class Wizard {
 
     const sex = document.getElementById("sex").value.trim();
     const age = document.getElementById("age").value.trim();
+    const whenStartedPlaying = document.getElementById("whenStartedPlaying").value;
+    const playigTime = document.getElementById("playigTime").value;
+    const whenStartedPlayingAdult = document.getElementById("whenStartedPlayingAdult").value;
+    const playigTimeAdult = document.getElementById("playigTimeAdult").value;
+    const selectedOption = document.querySelector('input[name="role"]:checked');
 
     // send API request
     const body = {
       sex,
       age,
+      testTaker: selectedOption.value,
+      whenStartedPlaying:
+        selectedOption.value == "player" ? whenStartedPlaying : whenStartedPlayingAdult,
+      playigTime: selectedOption.value == "player" ? playigTime : playigTimeAdult,
       totalScore: this.finalScore,
     };
     sendRequest(body);
@@ -138,8 +147,6 @@ export class Wizard {
     resultImg.setAttribute("src", imageUrl);
   }
 }
-
-
 
 function renderMessage(finalScore) {
   const testType = sessionStorage.getItem("testType");
