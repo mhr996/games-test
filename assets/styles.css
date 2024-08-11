@@ -399,4 +399,8 @@ input {
     margin: 47px auto 0 auto;
     width: 143px;
   }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: var(--swiper-navigation-top-offset, 84%);
+  }
 }
