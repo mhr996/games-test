@@ -2,18 +2,33 @@ import { questions, adultQuestions } from "./data.js";
 import { Survey, Wizard } from "./model.js";
 import { swiperInit } from "./swiper.js";
 
-const playersImages = [
-  "./assets/images/players/slide-one.jpg",
-  "./assets/images/players/slide-two.jpg",
-  "./assets/images/players/slide-three.jpg",
-];
+var x = window.matchMedia("(max-width: 600px)");
 
-const parentsImages = [
-  "./assets/images/parents/slide-one.jpg",
-  "./assets/images/parents/slide-two.jpg",
-  "./assets/images/parents/slide-three.jpg",
-  "./assets/images/parents/slide-four.jpg",
-];
+const playersImages = x.matches
+  ? [
+      "./assets/images/mobile/players/1.png",
+      "./assets/images/mobile/players/2.png",
+      "./assets/images/mobile/players/3.png",
+    ]
+  : [
+      "./assets/images/players/slide-one.jpg",
+      "./assets/images/players/slide-two.jpg",
+      "./assets/images/players/slide-three.jpg",
+    ];
+
+const parentsImages = x.matches
+  ? [
+      "./assets/images/mobile/parents/1.png",
+      "./assets/images/mobile/parents/2.png",
+      "./assets/images/mobile/parents/3.png",
+      "./assets/images/mobile/parents/4.png",
+    ]
+  : [
+      "./assets/images/parents/slide-one.jpg",
+      "./assets/images/parents/slide-two.jpg",
+      "./assets/images/parents/slide-three.jpg",
+      "./assets/images/parents/slide-four.jpg",
+    ];
 
 (() => {
   const wizard = new Wizard();
@@ -75,7 +90,13 @@ const parentsImages = [
         document.getElementById("image1").src = playersImages[0];
         document.getElementById("image2").src = playersImages[1];
         document.getElementById("image3").src = playersImages[2];
-        document.getElementById("image4").remove();
+
+        // Remove the 4th slide entirely
+        const slide4 = document.getElementById("image4")?.closest(".swiper-slide");
+        if (slide4) slide4.remove();
+
+        // init swiper
+        swiperInit();
       } else {
         const questionsDiv = document.getElementById("parentIntro");
         questionsDiv.style.display = "flex";
@@ -84,6 +105,9 @@ const parentsImages = [
         document.getElementById("image2").src = parentsImages[1];
         document.getElementById("image3").src = parentsImages[2];
         document.getElementById("image4").src = parentsImages[3];
+
+        // init swiper
+        swiperInit();
       }
     } else {
       document.getElementById("error-message-two").style.display = "block";
@@ -102,9 +126,6 @@ const parentsImages = [
     document.getElementById("qc").classList.remove("home-bg");
     document.getElementById("qcc").classList.remove("primary");
   });
-
-  // init swiper
-  swiperInit();
 })();
 
 window.addEventListener("beforeunload", function () {

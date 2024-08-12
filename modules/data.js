@@ -138,12 +138,15 @@ export var adultQuestions = [
   },
 ];
 
+var x = window.matchMedia("(max-width: 600px)");
 
 export const scoreRanges = [
   {
     min: 5,
     max: Infinity,
-    imageUrl: "https://www.ghc.sa/wp-content/uploads/sites/2/2024/08/bad-res-scaled.jpg",
+    imageUrl: x.matches
+      ? "https://www.ghc.sa/wp-content/uploads/sites/2/2024/08/mobile-result-bad.png"
+      : "https://www.ghc.sa/wp-content/uploads/sites/2/2024/08/bad-res-scaled.jpg",
     class: "primary",
     message: "",
   },
@@ -151,7 +154,9 @@ export const scoreRanges = [
   {
     min: 0,
     max: 4,
-    imageUrl: "https://www.ghc.sa/wp-content/uploads/sites/2/2024/08/good-res-scaled.jpg",
+    imageUrl: x.matches
+      ? "https://www.ghc.sa/wp-content/uploads/sites/2/2024/08/mobile-result-good.png"
+      : "https://www.ghc.sa/wp-content/uploads/sites/2/2024/08/good-res-scaled.jpg",
     class: "primary",
     message: "",
   },
@@ -161,7 +166,9 @@ export const scoreRangesParents = [
   {
     min: 5,
     max: Infinity,
-    imageUrl: "https://www.ghc.sa/wp-content/uploads/sites/2/2024/08/parents-bad-res-scaled.jpg",
+    imageUrl: x.matches
+      ? "https://www.ghc.sa/wp-content/uploads/sites/2/2024/08/mobile-parents-result-bad.png"
+      : "https://www.ghc.sa/wp-content/uploads/sites/2/2024/08/parents-bad-res-scaled.jpg",
     class: "primary",
     message: "",
   },
@@ -169,7 +176,9 @@ export const scoreRangesParents = [
   {
     min: 0,
     max: 4,
-    imageUrl: "https://www.ghc.sa/wp-content/uploads/sites/2/2024/08/parents-good-res-scaled.jpg",
+    imageUrl: x.matches
+      ? "https://www.ghc.sa/wp-content/uploads/sites/2/2024/08/mobile-parents-result-good.png"
+      : "https://www.ghc.sa/wp-content/uploads/sites/2/2024/08/parents-good-res-scaled.jpg",
     class: "primary",
     message: "",
   },

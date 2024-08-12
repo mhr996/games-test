@@ -1,6 +1,7 @@
 import { scoreRanges, scoreRangesParents } from "./data.js";
 import { sendRequest } from "./service.js";
 
+
 export class Survey {
   constructor(question, questionNum, answers) {
     this.question = question;
