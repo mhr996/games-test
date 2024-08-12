@@ -314,13 +314,13 @@ input {
   .title {
     font-size: 20px;
   }
-  #optionsC {
-    grid-template-columns: 1fr; /* Stack items in a single column */
-    column-gap: 0; /* Remove column gap */
-    row-gap: 14px; /* Adjust row gap as needed */
+  /* #optionsC {
+    grid-template-columns: 1fr; 
+    column-gap: 0;
+    row-gap: 14px; 
     margin-top: 16px;
     text-align: start;
-  }
+  } */
   .question p {
     text-align: start;
   }
@@ -435,5 +435,10 @@ input {
   }
   #playerIntro {
     min-height: 480px;
+  }
+  #optionsC {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 55px;
   }
 }
