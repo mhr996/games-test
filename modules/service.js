@@ -1,5 +1,5 @@
 export async function sendRequest(body) {
-    const url = 'https://ghc-function.azurewebsites.net/api/driver-test-api?code=9Fkx1aazw5tyLPpGydCOfchwm38c66qAwk3J-o1U54ucAzFuYGKM6A%3D%3D'; // replace with your endpoint URL
+    const url = 'https://ghcpro-function.azurewebsites.net/api/game-survey?code=OX7U3HITzveIvt1Y9kfXtHDSqcLaQKD4D3FhA9wKRna2AzFuFIpMzw%3D%3D';
 
     try {
         const response = await fetch(url, {
